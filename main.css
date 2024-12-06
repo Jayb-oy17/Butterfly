@@ -1,0 +1,383 @@
+/** @format */
+
+:root {
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Jost", sans-serif;
+  --background-color: #ffffff;
+  --default-color: #444444;
+  --heading-color: #0f394c;
+  --accent-color: #49b5e7;
+}
+
+h1,
+h2 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+.padd-10 {
+  padding: 2rem 10rem;
+}
+
+.mar-5 {
+  margin: 5rem 0;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 2rem auto;
+}
+.titled {
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: var(--heading-font);
+}
+
+/* NAV  */
+.navBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+  background: var(--background-color);
+  z-index: 1;
+}
+.logo {
+  width: fit-content;
+  height: auto;
+}
+.main-list {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.navList {
+  font-size: 16px;
+  font-family: var(--nav-font);
+  font-weight: 600;
+  color: var(--default-color);
+}
+.nactive {
+  color: var(--accent-color);
+}
+
+/* HERO  */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f5fbff;
+  padding-top: 15rem;
+  padding-bottom: 5rem;
+}
+.heroTitle {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+.heroText {
+  font-size: 2rem;
+  font-family: var(--default-font);
+  color: var(--default-color);
+  margin-bottom: 3rem;
+}
+.heroBtn {
+  width: fit-content;
+  padding: 1rem 2rem;
+  background: var(--accent-color);
+  color: var(--background-color);
+  font-size: 16px;
+  font-family: var(--default-font);
+  border-radius: 5px;
+}
+.heroImg {
+  width: 50%;
+}
+
+/* ABOUT  */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+.aboutImage {
+  width: 100%;
+  height: 100%;
+}
+.aboutTitle {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+.aboutText {
+  font-size: 18px;
+  margin-bottom: 3rem;
+}
+
+.aboutContent {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+.aboutIcon {
+  font-size: 8rem;
+  color: var(--accent-color);
+}
+.aboutSub {
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
+
+/* CLIENTS  */
+.clients {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.clientBox {
+  width: 100%;
+  height: 100%;
+  padding: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(128, 128, 128, 0.578);
+}
+.client {
+  width: 70%;
+  transition: all 0.3s;
+}
+.client:hover {
+  transform: scale(1.2);
+}
+
+/* SERVICES  */
+.service {
+  background: #f5fbff;
+}
+.serviceBox {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.services {
+  background: var(--background-color);
+  border-radius: 1rem;
+  padding: 5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+.serviceIcon {
+  position: absolute;
+  font-size: 8rem;
+  left: -12%;
+}
+.a {
+  color: #0dcaf0;
+}
+.b {
+  color: #fd7e14;
+}
+.c {
+  color: #34cea0;
+}
+.d {
+  color: #df1529;
+}
+.e {
+  color: #6610f2;
+}
+.f {
+  color: #f3268c;
+}
+.serviceTitle {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+.serviceSub {
+  font-size: 16px;
+  color: var(--default-color);
+  font-family: var(--default-font);
+}
+
+/* TEAM  */
+.teamBox {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+.teamInfo {
+  width: 100%;
+  position: relative;
+}
+.teamImg {
+  width: 100%;
+  transition: 0.4s;
+}
+.team-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+  opacity: 0;
+}
+.teamInfo:hover .teamImg {
+  filter: brightness(30%);
+}
+.teamInfo:hover .team-info {
+  opacity: 1;
+}
+.name {
+  font-size: 2rem;
+  font-family: var(--heading-font);
+  font-weight: 700;
+  color: var(--background-color);
+}
+.job {
+  font-size: 2rem;
+  color: var(--background-color);
+  font-family: var(--nav-font);
+  font-weight: 700;
+}
+.teamIcon {
+  display: flex;
+  color: var(--background-color);
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.teamico {
+  font-size: 2rem;
+}
+
+/* GALLERY  */
+.gallery {
+  padding: 1rem;
+}
+.galleries {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3px;
+}
+.galleryImg {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.galleryImg img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s;
+}
+.galleryImg img:hover {
+  transform: scale(1.1);
+}
+
+/* CONTACT  */
+.map {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.map iframe {
+  width: 100%;
+  height: 30rem;
+}
+.contact-info{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.info{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5rem;
+    gap: 2rem;
+}
+.infoIcon{
+    padding: 15px;
+    font-size: 25px;
+    color: var(--background-color);
+    background: var(--accent-color);
+    border-radius: 5px;
+}
+.infoTitle{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.infoText{
+    font-size: 16px;
+    color: var(--default-color);
+    font-family: var(--default-font);
+}
+.mail{
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+}
+.inputs{
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    outline: none;
+}
+.meg{
+     width: 100%;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    outline: none;
+    height: 20rem;
+}
+.btn{
+    width: fit-content;
+    padding: 1rem 2rem;
+    background: var(--accent-color);
+    border: none;
+    color: var(--background-color);
+    font-family: var(--nav-font);
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    margin: auto;
+    border-radius: 5px;
+}
+
+/* COPY  */
+.copy{
+    text-align: center;
+    padding: 2rem;
+    background: #F5F5F5;
+}
+.copyright{
+    font-size: 15px;
+    font-family: var(--default-font);
+    font-weight: 600;
+    color: var(--default-color);
+}
+.copyright span{
+    font-size: 18px;
+    color: var(--accent-color);
+}

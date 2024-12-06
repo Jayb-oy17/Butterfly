@@ -1,0 +1,45 @@
+/** @format */
+
+@media (max-width: 1200px) {
+  .padd-10 {
+    padding: 2rem;
+  }
+  .hero {
+    padding-top: 10rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 3rem;
+  }
+  .heroImg {
+    width: 100%;
+  }
+  .about,
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
+  .serviceBox,
+  .teamBox,
+  .galleries,
+  .clients {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .main-list {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .serviceBox,
+  .teamBox,
+  .galleries {
+    grid-template-columns: 1fr;
+  }
+}
